@@ -9,7 +9,7 @@ export class UploadComponent implements OnInit {
 
   imageUrl : string = "/assets/download.png"
   fileToUpload : File = null;
-
+  data: string;
 
   constructor() { }
 
@@ -29,4 +29,6 @@ export class UploadComponent implements OnInit {
   
   }
   
+
+
 }
