@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ShowdataComponent } from './showdata.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
@@ -10,8 +10,7 @@ import { ShowdataComponent } from './showdata.component';
   declarations: [ShowdataComponent],
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
+    BrowserModule
   ],
   exports:[
     ShowdataComponent

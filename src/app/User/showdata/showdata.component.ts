@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShowDataService } from './showdata.service';
 
 @Component({
   selector: 'app-showdata',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./showdata.component.css']
 })
 export class ShowdataComponent implements OnInit {
+  myresult:any=[];
 
-  constructor() { }
+  constructor(private config:ShowDataService) { }
 
   ngOnInit(): void {
+    this.config.getData()
+      .subscribe((result: any) => {
+
+        this.myresult = result.PersonalInfolistModel;
+        // console.log(this.myresult)
+      });
+  }
   }
 
-}
+
