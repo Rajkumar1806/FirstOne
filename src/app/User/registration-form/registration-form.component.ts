@@ -34,10 +34,10 @@ export class RegistrationFormComponent implements OnInit {
   }
     submit(){
       this.isSubmitted = true;
-      if (this.registrationform.invalid) {
+      if (this.registrationform.invalid, this.passwords) {
         return;
     }
-
+    console.log(this.registrationform)
     }
 
 
