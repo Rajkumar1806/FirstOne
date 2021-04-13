@@ -9,6 +9,11 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot([
+    {
+      path: '',
+      redirectTo: "/app-loginpage",
+      pathMatch: 'full'
+    },
     { path:'app-loginpage', component:LoginpageComponent },
     { path:'app-registration-form', component:RegistrationFormComponent },
     { path: 'app-showdata', component:ShowdataComponent },
