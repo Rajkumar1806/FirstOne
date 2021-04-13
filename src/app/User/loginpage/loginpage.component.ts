@@ -26,7 +26,6 @@ export class LoginpageComponent implements OnInit {
 
 
   submit(){
-    console.log(this.loginform);
 
     this.submitted = true;
     if (this.loginform.invalid) {
