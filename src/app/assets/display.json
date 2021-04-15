@@ -1,0 +1,23 @@
+{
+    "PersonalInfolistModel": [
+      {
+        "EmployeeCode": "1111",
+        "EmployeeName": "Krishna",
+        "EmployeeDesignation": "Gamer'",
+        "Salary": "50000"
+      },
+      {
+        "EmployeeCode": "1112",
+        "EmployeeName": "Root",
+        "EmployeeDesignation": "Player'",
+        "Salary": "150000"
+      },
+      {
+        "EmployeeCode": "1113",
+        "EmployeeName": "B Reddy",
+        "EmployeeDesignation": "SCIENTIST'",
+        "Salary": "550000"
+      }
+    ]
+  }
+  
