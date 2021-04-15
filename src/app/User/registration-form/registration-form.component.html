@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form [formGroup]="registrationform" (ngSubmit)="submit()">               
+                <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" formControlName="fname" class="form-control">
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.fname">
+                        <div class="error-message" *ngIf="registrationform.get('fname').hasError(error.type) && (registrationform.get('fname').dirty || registrationform.get('fname').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" formControlName="lname" class="form-control">
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.lname">
+                        <div class="error-message" *ngIf="registrationform.get('lname').hasError(error.type) && (registrationform.get('lname').dirty || registrationform.get('lname').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="form-group">
+                    <label>E.mail</label>
+                    <input type="text" formControlName="email" class="form-control">
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.email">
+                        <div class="error-message" *ngIf="registrationform.get('email').hasError(error.type) && (registrationform.get('email').dirty || registrationform.get('email').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="form-group">
+                    <label>Mobile No</label>
+                    <input type="text" formControlName="mnumber" class="form-control" maxlength=10>
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.mnumber">
+                        <div class="error-message" *ngIf="registrationform.get('mnumber').hasError(error.type) && (registrationform.get('mnumber').dirty || registrationform.get('mnumber').touched)">
+                            {{ error.message }}
+                        </div>
+                    </ng-container>
+                </div>
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="gender" value="male"
+                                formControlName="gender" checked>
+                            <label for="gender" class="form-check-label" for="gender">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" name="gender" formControlName="gender"
+                                value="female">
+                            <label for="gender" class="form-check-label" for="gender">Female</label>
+                        </div>
+                    </div>
+                    <div class="error-messages">
+                        <ng-container *ngFor="let error of error_messages.gender">
+                            <div class="error-message" *ngIf="registrationform.get('gender').hasError(error.type) && (registrationform.get('gender').dirty || registrationform.get('gender').touched)">
+                                {{ error.message }}
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea type="text" formControlName="address" class="form-control"></textarea>
+                    </div>
+                    <div class="error-messages">
+                        <ng-container *ngFor="let error of error_messages.address">
+                            <div class="error-message" *ngIf="registrationform.get('address').hasError(error.type) && (registrationform.get('address').dirty || registrationform.get('address').touched)">
+                                {{ error.message }}
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" formControlName="passwords" class="form-control" minilength=8>
+                    </div>
+                    <div class="error-messages">
+                        <ng-container *ngFor="let error of error_messages.passwords">
+                            <div class="error-message" *ngIf="registrationform.get('passwords').hasError(error.type) && (registrationform.get('passwords').dirty || registrationform.get('passwords').touched)">
+                                {{ error.message }}
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="form-group">
+                        <label>Confirm Password</label>
+                        <input type="password" formControlName="confirmpassword" class="form-control">
+                    </div>
+                    <div class="error-messages">
+                        <ng-container *ngFor="let error of error_messages.confirmpassword">
+                            <div class="error-message" *ngIf="registrationform.get('confirmpassword').hasError(error.type) && (registrationform.get('confirmpassword').dirty || registrationform.get('confirmpassword').touched)">
+                                {{ error.message }}
+                            </div>
+                        </ng-container>
+                    </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" [disabled]="!registrationform.valid">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
